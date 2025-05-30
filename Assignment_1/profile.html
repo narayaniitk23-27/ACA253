@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Narayan's Profile Page</title>
     <style>
         * {
@@ -16,9 +17,20 @@
         body {
             margin: 0;
             background: #111;
-            color: white;
+            color: rgb(255, 255, 255);
             font-family: Arial, sans-serif;
         }
+        .raleway-custom {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Replace with desired weight */
+  font-style: normal;
+}
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
         .navbar {
             background-color: rgba(0, 0, 0, 0.7);
@@ -113,7 +125,7 @@
             width: 22vw;
             height: 450px;
             background-color: rgba(0, 0, 0, 0.5);
-            
+            color: rgb(255, 255, 255);
             padding: 20px;
             border-radius: 20px;
             display: flex;
@@ -194,17 +206,50 @@
             z-index: 0;
         }
 
+        .paint-heading {
+            position: relative;
+            display: inline-block;
+            color: white;
+            width: max-content;
+            margin-left: 0;
+            font-family: Raleway, sans-serif;
+            font-size: 1.8rem;
+            padding: 0.2em 0.6em;
+            z-index: 1;
+        }
+
+        .paint-heading::before {
+            content: '';
+            position: absolute;
+
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 250%;
+            background: url('AK-Interactive-AKABT020-Indian-Yellow-Oil-Paint-Brush-Stroke_1200x1200-removebg-preview.png') no-repeat left center / cover;
+            background-size: 100% 100%;
+            z-index: -1;
+            opacity: 0.8;
+            border-radius: 6px;
+        }
+
+        li::before {
+            background-color: transparent;
+            filter: hue-rotate(200deg);
+        }
+
+
 
         /* Typing effect */
         .typing {
-            text-decoration: underline;
-            font-family: 'Courier New', monospace;
-            font-size: 2rem;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 2px solid white;
-            width: 0;
-        }
+    text-decoration: underline;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 2rem;
+    border-right: 2px solid white;
+    display: inline-block; /* ensure inline width is respected */
+}
+
 
         @keyframes caret {
             50% {
@@ -242,9 +287,10 @@
                 onerror="this.onerror=null; this.src='https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/urus/2023/model_chooser/urus_s_m.jpg';"
                 class="profile-photo">
             <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: sm;">
-            Welcome to Narayan's Profile Page 😊</p>
+                Welcome to Narayan's Profile Page 😊</p>
 
-            <p style="font-size: medium;">I am 2nd year UG CSE at IIT Kanpur&#127979. This is my first profile website. I will keep improving the design of this website.</p>
+            <p style="font-size: medium;">I am 2nd year UG CSE at IIT Kanpur&#127979. This is my first profile website.
+                I will keep improving the design of this website.</p>
 
             <p style="font-size: small;">This is a profile card.</p>
             <p>Black Urus is alt image</p>
@@ -253,20 +299,41 @@
         <div class="content-wrapper">
             <div id="description" class="tab-content active">
                 <h2 class="typing" data-text="Description&#128196">Description</h2>
-                <p>Hi &#128075,  I am Narayan, a passionate developer and designer &#x1F4BB.</p>
+                <p>Hi &#128075, I am Narayan, a passionate developer and designer &#x1F4BB.</p>
                 <p>i will add more text later on. Too lazy to do it now.</p>
                 &nbsp;
-                <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 30px; color: #000; ">README_</h2>
-                <p style="font-size: larger; color: black;">I have added allthe asked sections viz. Description, Hobbies, Projects and Skills & Courses. Edit button is also added next to SnC heading.</p>
+                <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 30px; color: #000; ">
+                    README_</h2>
+                <p style="font-size: larger; color: black;">I have added allthe asked sections viz. Description,
+                    Hobbies, Projects and Skills & Courses. Edit button is also added next to SnC heading.</p>
                 &nbsp;
                 <p style="font-size: large;">I’m open to suggestions and improvements &#128516.</p>
             </div>
             <div id="hobbies" class="tab-content">
                 <h2 class="typing" data-text="Hobbies&#128150">Hobbies</h2>
+                <p style="font-style: italic; font-weight: bolder; color: rgb(0, 0, 0);">"Life's a dish, spice it up
+                    with hobbies" </p>
                 <ul>
-                    <li>Coding</li>
-                    <li>Chess</li>
-                    <li>Music</li>
+                    <li class="paint-heading">Swimming</li>
+                    <p>I learnt Swimming last year. Though I have practiced it for just 2 months in total. There’s
+                        something about the rhythm of strokes, the cool silence underwater, diving underwater, as
+                        visibility fades away and you live every breath, just serene, isolation, feels like you are the only one in the entire world... and not to forget the occasional races with
+                        imaginary competitors that makes it my favorite way to unwind.</p>
+                    <li class="paint-heading">Chess</li>
+                    <p>Only sport that will make you tilt and roar like godzilla and smash table like hulk. I start a
+                        game thinking I will play perfectly and then a blunder happens in 6th move. Though you learn by
+                        making mistakes and practicing more and more games ofcourse.</p>
+                    <p>There's a funny saying about chess which goes like</p>
+                    <p style="font-style: italic; font-weight: bolder; color: rgb(0, 0, 0);">"The ability to play chess is the sign of a gentleman. The ability to play chess well is the sign of a wasted life"</p>
+                    <div style="font-style: italic; text-align: right; font-weight: bolder; color: rgb(0, 0, 0);">~Paul Morphy</div>
+                    <li class="paint-heading">Movies</li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam perspiciatis ab sit. Provident natus
+                        itaque eveniet laboriosam cumque aut, labore enim magni, sapiente est, quos quasi adipisci omnis
+                        odit cupiditate.</p>
+                    <li class="paint-heading">Music</li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sequi mollitia iste autem
+                        exercitationem iure doloribus culpa ipsum rem! Delectus amet mollitia perspiciatis perferendis
+                        eos ex quo alias sit beatae!</p>
                 </ul>
             </div>
             <div id="projects" class="tab-content">
@@ -325,26 +392,25 @@
         }
 
         function startTyping() {
-            document.querySelectorAll('.typing').forEach(el => {
-                const existingTimer = typingTimers.get(el);
-                if (existingTimer) clearTimeout(existingTimer);
+    document.querySelectorAll('.typing').forEach(el => {
+        const existingTimer = typingTimers.get(el);
+        if (existingTimer) clearTimeout(existingTimer);
 
-                el.textContent = '';
-                const text = el.dataset.text;
-                let i = 0;
-                el.style.width = '0';
+        const text = el.dataset.text;
+        el.textContent = '';
+        let i = 0;
 
-                function type() {
-                    if (i < text.length) {
-                        el.textContent += text.charAt(i++);
-                        el.style.width = el.textContent.length + 'ch';
-                        const timer = setTimeout(type, 150);
-                        typingTimers.set(el, timer);
-                    }
-                }
-                type();
-            });
+        function type() {
+            if (i < text.length) {
+                el.textContent += text.charAt(i++);
+                const timer = setTimeout(type, 150);
+                typingTimers.set(el, timer);
+            }
         }
+        type();
+    });
+}
+
 
         document.addEventListener('DOMContentLoaded', () => {
             startTyping();
